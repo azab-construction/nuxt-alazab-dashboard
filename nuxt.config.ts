@@ -43,4 +43,14 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2024-12-14',
+
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'default',
+        path: '*',
+        component: resolve(__dirname, 'pages/landing.vue')
+      });
+    }
+  }
 })
