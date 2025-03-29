@@ -1,35 +1,30 @@
-![nuxt-shadcn-dashboard-social-card](https://nuxt-shadcn-dashboard.vercel.app/social-card.png)
+![nuxt-alazab-dashboard](https://azab.services/social-card.png)
 
-# Nuxt Shadcn UnoCSS - Dashboard
+# Nuxt Alazab Dashboard – لوحة تحكم العزب
 
-[![built with nuxt][nuxt-src]][nuxt-href]
+لوحة تحكم مبنية باستخدام Nuxt 3 + Shadcn + UnoCSS  
+مصممة خصيصًا لإدارة طلبات الصيانة وتحليل بيانات الفروع بواجهة احترافية.
 
-- [Live demo](https://nuxt-shadcn-dashboard.vercel.app)
-- [Component Documentation](https://shadcn-vue.com/docs/introduction)
+---
 
-## Quick Start
+## 📦 محتويات المشروع
 
-```bash [Terminal]
-npx degit dianprata/nuxt-shadcn-dashboard my-dashboard-app
-cd my-dashboard-app
-pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
-```
+- صفحات جاهزة:
+  - `/login`: تسجيل الدخول
+  - `/maintenance/requests`: طلبات الصيانة
+  - `/maintenance/reports`: تقارير الأعمال
+  - `/gallery`: معرض صور الأعمال
+  - `/admin/users`: إدارة المستخدمين
+  - `/admin/logs`: سجل الدخول
+- تكامل كامل مع قاعدة بيانات **Supabase**
+- واجهات حديثة باستخدام Shadcn UI
+- نظام صلاحيات للمستخدمين
 
-## Contributing
+---
 
-1. Clone this repository.
-2. Install dependencies `pnpm install`.
-3. Use `pnpm run dev` to start dev server.
+## 🚀 طريقة التشغيل
 
-## Credits
+```bash
+pnpm install
+pnpm run dev
 
-- [Nuxt.js](https://nuxtjs.org/)
-- [Shadcn Vue](https://shadcn-vue.com/)
-- [UnoCSS](https://unocss.com/)
-
-## License
-
-MIT
-
-[nuxt-src]: https://img.shields.io/badge/Built%20With%20Nuxt-18181B?logo=nuxt.js
-[nuxt-href]: https://nuxt.com/
