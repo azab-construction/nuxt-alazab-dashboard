@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-
   pull_request:
     branches:
       - main
@@ -17,13 +16,14 @@ jobs:
         name: Checkout
         uses: actions/checkout@v3
 
-      - id: setup-ni
-        name: Setup
-        run: npm i -g @antfu/ni
+      - name: Setup pnpm
+        run: |
+          npm install -g pnpm
 
-      - id: install-deps
-        name: Install dependencies
-        run: nci --no-frozen-lockfile
+      - name: Install dependencies
+        run: |
+          pnpm install --frozen-lockfile
 
       - name: Lint
-        run: nr lint
+        run: |
+          pnpm run lint
