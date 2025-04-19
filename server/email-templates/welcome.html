@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مرحبًا بك في العزب</title>
+    <style>
+      body {
+        font-family: "Tahoma", sans-serif;
+        background-color: #f5f7fa;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        line-height: 1.8;
+      }
+      .container {
+        max-width: 700px;
+        margin: auto;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+      }
+      .header {
+        background-color: #111111;
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      .content {
+        padding: 30px;
+        font-size: 15px;
+      }
+      .footer {
+        padding: 20px;
+        background: #f0f0f0;
+        font-size: 13px;
+        color: #666;
+        text-align: center;
+        line-height: 2;
+      }
+      .highlight {
+        color: #111;
+        font-weight: bold;
+      }
+      a.btn {
+        display: inline-block;
+        background: #111111;
+        color: #fff !important;
+        padding: 10px 20px;
+        margin-top: 15px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>مرحبًا بكم على متن طائرة العزب ✈️</h1>
+        <p>يسعدنا وجودكم في مجتمعنا</p>
+      </div>
+      <div class="content">
+        <p>مرحبًا <span class="highlight">{{username}}</span>،</p>
+        <p>
+          يسعدنا أن نقدم لك برنامج إدارة الأعمال المعمارية المقدم من
+          <strong>Al-Azab Construction</strong>.<br />
+          تم إنشاء حساب مستخدم جديد لك حيث يمكنك متابعة وإدارة أعمالك المعمارية.
+        </p>
+
+        <p>تم إعداد البرنامج خصيصًا لتيسير المهام التالية:</p>
+        <ul>
+          <li>حساب مستخدم يمكنك الدخول والتصفح داخل مواقعنا كما تشاء.</li>
+          <li>
+            الدخول على المتجر والتسويق لمنتجاتنا المميزة
+            <span class="highlight">{{request_status}}</span>.
+          </li>
+          <li>متابعة مشاريعك الجارية ومشاهدة جميع مراحل التنفيذ.</li>
+          <li>الوصول إلى الفواتير والإيصالات وكتابة التعليقات.</li>
+          <li>
+            مشاهدة عروض الأسعار والموافقة أو الرفض باستخدام نموذج العرض
+            <span class="highlight">{{request_url}}</span>.
+          </li>
+          <li>
+            تقديم طلبات خدمات أو صيانة أو عروض أسعار
+            <span class="highlight">{{request_number}}</span>.
+          </li>
+          <li>تحميل جميع ملفاتك بصيغ PDF وXLS.</li>
+          <li>مشاهدة ودفع الفواتير أونلاين باستخدام كافة طرق الدفع.</li>
+          <li>الاشتراك في باقات العزب لدعم العلامات التجارية A to Z.</li>
+          <li>الانضمام إلى منصة المدونات والمحتوى الهندسي.</li>
+        </ul>
+
+        <p>
+          جميع الخدمات الرقمية مجانية تمامًا لعملائنا الكرام.<br />
+          شركة العزب تسعى لبناء مؤسسة معمارية متكاملة تخدم جميع قطاعات العقارات.
+        </p>
+        <p>
+          نؤمن أن هذا الحلم سيتحقق من خلال علاقات طويلة الأمد معكم، وتقديم أفضل
+          الحلول لتلبية احتياجاتكم. وهذه هي رسالتنا.
+        </p>
+        <p style="margin-top: 20px">
+          مع أطيب التحيات،<br />
+          <strong>محمد عزب</strong>
+        </p>
+
+        <hr style="margin: 30px 0" />
+
+        <p><strong>بيانات الدخول:</strong></p>
+        <p>اسم المستخدم: <span class="highlight">{{username}}</span></p>
+        <p>كلمة المرور: <span class="highlight">{{password}}</span></p>
+
+        <a href="https://al-azab.co" class="btn">زيارة موقعنا</a>
+      </div>
+
+      <div class="footer">
+        Azab Construction Company هي شركة تابعة للعلامة التجارية المسجلة<br />
+        D-U-N-S No: 849203826 – تحت الاسم القانوني:<br />
+        <em
+          >Azab for Implementation Management Works for Industrial and Service
+          Projects and General Supplies</em
+        ><br />
+        العنوان: 8/500 شارع المعادي، القاهرة، مصر<br />
+        البريد: info@al-azab.co – الهاتف: 0227047955 – الضريبة: 577219804 –
+        السجل التجاري: 218670<br />
+        © 2025 Alazab Construction, Inc. جميع الحقوق محفوظة.
+      </div>
+    </div>
+  </body>
+</html>

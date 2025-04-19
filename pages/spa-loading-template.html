@@ -1,0 +1,55 @@
+<!-- app/spa-loading-template.html -->
+<div class="spa-loading">
+  <div class="logo-container">
+    <img src="/logo.svg" alt="شعار التطبيق" />
+  </div>
+  <div class="loading-spinner"></div>
+  <h2>جاري تحميل نظام إدارة الصيانة...</h2>
+</div>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Cairo", sans-serif;
+    background-color: #f5f5f5;
+  }
+
+  .spa-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff;
+    color: #333;
+  }
+
+  .logo-container {
+    margin-bottom: 2rem;
+  }
+
+  .logo-container img {
+    width: 150px;
+    height: auto;
+  }
+
+  .loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
