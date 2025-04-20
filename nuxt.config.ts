@@ -12,12 +12,10 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/ui",
     "@nuxtjs/tailwindcss",
-    "@nuxt/ui-pro",
     "@nuxtjs/supabase",
     "@nuxtjs/i18n",
     "@nuxthub/core",
     "nuxt-auth-utils",
-    // إضافات مقترحة
     "@nuxt/content",
     "@formkit/nuxt",
     "@nuxt/test-utils",
@@ -59,11 +57,16 @@ export default defineNuxtConfig({
     },
     aiApiKey: process.env.AI_API_KEY,
     jwtSecret: process.env.JWT_SECRET,
+    nuxthub: {
+      apiKey: process.env.NUXTHUB_API_KEY,
+      projectId: process.env.NUXTHUB_PROJECT_ID,
+      environment: process.env.NUXTHUB_ENVIRONMENT
+    },
     public: {
       SUPABASE_URL: process.env.NUXT_PUBLIC_SUPABASE_URL || "",
       SUPABASE_ANON_KEY: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY || "",
       apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL || "/api",
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://example.com",
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://azab.services",
       googleMapsApiKey: process.env.NUXT_PUBLIC_GOOGLE_MAPS_API_KEY,
       maintenanceMode: process.env.NUXT_PUBLIC_MAINTENANCE_MODE === "true",
     },
@@ -163,4 +166,54 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: "2023-12-14",
+
+  nuxthub: {
+    storage: {
+      driver: 'fs',
+      base: './.data'
+    },
+    
+    auth: {
+      enabled: true,
+      strategies: {
+        local: {
+          token: {
+            property: 'token',
+            global: true,
+            required: true,
+            type: 'Bearer'
+          },
+          user: {
+            property: 'user',
+            autoFetch: true
+          },
+          endpoints: {
+            login: { url: '/api/auth/login', method: 'post' },
+            logout: { url: '/api/auth/logout', method: 'post' },
+            user: { url: '/api/auth/user', method: 'get' }
+          }
+        }
+      }
+    },
+    
+    database: {
+      enabled: true,
+      driver: 'fs',
+      base: './.data/db'
+    },
+    
+    cache: {
+      enabled: true,
+      driver: 'fs',
+      base: './.data/cache'
+    },
+
+    deploy: {
+      target: 'production',
+      autoDeploy: true,
+      compatibilityDate: "2023-12-14",
+      branch: 'main'
+    }
+  },
 });
+  
