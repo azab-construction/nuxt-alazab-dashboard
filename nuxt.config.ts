@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@pinia/nuxt",
     "@nuxtjs/color-mode",
-    "@nuxt/devtools",
     "@nuxt/image",
     "@nuxt/ui",
     "@nuxtjs/tailwindcss",
@@ -18,12 +17,10 @@ export default defineNuxtConfig({
     "nuxt-auth-utils",
     "@nuxt/content",
     "@formkit/nuxt",
-    "@nuxt/test-utils",
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
     "@nuxtjs/html-validator",
     "@nuxtjs/fontaine",
-    "nuxt-vitest",
     "@nuxtjs/device",
     "@nuxtjs/partytown",
   ],
@@ -60,7 +57,7 @@ export default defineNuxtConfig({
     nuxthub: {
       apiKey: process.env.NUXTHUB_API_KEY,
       projectId: process.env.NUXTHUB_PROJECT_ID,
-      environment: process.env.NUXTHUB_ENVIRONMENT
+      environment: process.env.NUXTHUB_ENVIRONMENT,
     },
     public: {
       SUPABASE_URL: process.env.NUXT_PUBLIC_SUPABASE_URL || "",
@@ -169,51 +166,49 @@ export default defineNuxtConfig({
 
   nuxthub: {
     storage: {
-      driver: 'fs',
-      base: './.data'
+      driver: "fs",
+      base: "./.data",
     },
-    
+
     auth: {
       enabled: true,
       strategies: {
         local: {
           token: {
-            property: 'token',
+            property: "token",
             global: true,
             required: true,
-            type: 'Bearer'
+            type: "Bearer",
           },
           user: {
-            property: 'user',
-            autoFetch: true
+            property: "user",
+            autoFetch: true,
           },
           endpoints: {
-            login: { url: '/api/auth/login', method: 'post' },
-            logout: { url: '/api/auth/logout', method: 'post' },
-            user: { url: '/api/auth/user', method: 'get' }
-          }
-        }
-      }
+            login: { url: "/api/auth/login", method: "post" },
+            logout: { url: "/api/auth/logout", method: "post" },
+            user: { url: "/api/auth/user", method: "get" },
+          },
+        },
+      },
     },
-    
+
     database: {
       enabled: true,
-      driver: 'fs',
-      base: './.data/db'
+      driver: "fs",
+      base: "./.data/db",
     },
-    
+
     cache: {
       enabled: true,
-      driver: 'fs',
-      base: './.data/cache'
+      driver: "fs",
+      base: "./.data/cache",
     },
 
     deploy: {
-      target: 'production',
+      target: "production",
       autoDeploy: true,
-      compatibilityDate: "2023-12-14",
-      branch: 'main'
-    }
+      branch: "main",
+    },
   },
 });
-  
